@@ -2,8 +2,8 @@ name: daily-hotspot
 
 on:
   schedule:
-    # 北京时间每天 08:00（GitHub 用 UTC，故为 00:00 UTC）
-    - cron: '0 0 * * *'
+    # 北京时间每天 08:17（UTC 00:17；避开整点高峰，GitHub 整点定时任务易延迟/丢弃）
+    - cron: '17 0 * * *'
   workflow_dispatch:        # 手动触发，方便先测试
 
 jobs:
